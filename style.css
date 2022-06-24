@@ -16,19 +16,254 @@ body {
   height: 667px;
   width: 320px;
   background-color: rgb(69, 79, 134);
-  box-shadow: 0 15px 32px rgba(0, 0, 0, 0.33), 0 10px 12px rgba(0, 0, 0, 0.13);
+  box-shadow: 10px 25px 32px rgba(0, 0, 0, 0.33),
+    10px 20px 22px rgba(0, 0, 0, 0.13);
   overflow: hidden;
 }
 
 .target {
   width: 60px;
-  background-color: aqua;
+  background-color: rgb(61, 56, 48);
   position: absolute;
+  border-radius: 100px;
+}
+
+.target .front-layer {
+  width: 60px;
+  background-color: rgb(61, 56, 48);
+  position: absolute;
+  border-radius: 100px;
+  height: 60px;
+}
+
+.target .ear {
+  width: 22px;
+  height: 50px;
+  background-color: rgb(61, 56, 48);
+  border-radius: 60%;
+}
+
+.target .inner-ear {
+  width: 13px;
+  height: 42px;
+  background-color: rgb(90, 87, 81);
+  border-radius: 60%;
+}
+
+.target .left-ear {
+  transform-origin: bottom left;
+  transform: rotate(-35deg);
+  left: 22px;
+  top: -8px;
+}
+
+.target .right-ear {
+  transform-origin: bottom right;
+  transform: rotate(35deg);
+  right: 22px;
+  top: -8px;
+}
+
+.target .clear-layer {
+  width: 30px;
+  height: 50px;
+  background-color: rgb(175, 175, 175);
+  border-radius: 100px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  top: 10px;
+}
+
+.target.layer-1 .curve {
+  width: 38px;
+  height: 50px;
+  background-color: rgb(69, 79, 134);
+  top: 35px;
+  border-radius: 60%;
+}
+
+.target.layer-2 .curve {
+  width: 38px;
+  height: 50px;
+  background-color: rgb(69, 79, 134);
+  top: 35px;
+  border-radius: 60%;
+}
+
+.target.layer-4 .curve {
+  width: 38px;
+  height: 50px;
+  background-color: azure;
+  top: 35px;
+  border-radius: 60%;
+}
+
+.target.layer-6 .curve {
+  width: 38px;
+  height: 50px;
+  background-color: azure;
+  top: 35px;
+  border-radius: 60%;
+}
+
+.target .curve.left-bottom {
+  left: -15px;
+}
+
+.target .curve.right-bottom {
+  right: -15px;
+}
+
+.target.layer-1 .curve-2 {
+  width: 20px;
+  height: 26px;
+  background-color: rgb(69, 79, 134);
+  top: 16px;
+}
+
+.target.layer-2 .curve-2 {
+  width: 20px;
+  height: 26px;
+  background-color: rgb(69, 79, 134);
+  top: 16px;
+}
+
+.target.layer-4 .curve-2 {
+  width: 20px;
+  height: 26px;
+  background-color: azure;
+  top: 16px;
+}
+
+.target.layer-6 .curve-2 {
+  width: 20px;
+  height: 26px;
+  background-color: azure;
+  top: 16px;
+}
+
+.target .curve-2.left-2 {
+  left: -13px;
+  transform: rotate(-20deg);
+}
+
+.target .curve-2.right-2 {
+  right: -13px;
+  transform: rotate(20deg);
+}
+
+.target .outer-eye {
+  width: 10px;
+  height: 8px;
+  background-color: antiquewhite;
+  border-radius: 60%;
+  border: 0.5px solid rgb(34, 34, 34);
+}
+
+.target .inner-eye {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(54, 52, 49);
+  border-radius: 50%;
+}
+
+.target .outer-eye.right-eye {
+  top: 20px;
+  right: 10px;
+  transform: rotate(-20deg);
+}
+
+.target .outer-eye.left-eye {
+  top: 20px;
+  left: 10px;
+  transform: rotate(20deg);
+}
+
+.target .inner-eye.right-eye {
+  top: 21px;
+  right: 12px;
+}
+
+.target .inner-eye.left-eye {
+  top: 21px;
+  left: 12px;
+}
+
+.target .large-nose {
+  width: 22px;
+  height: 15px;
+  border-left: 0.5px solid rgba(44, 44, 44, 0.274);
+  border-right: 0.5px solid rgba(44, 44, 44, 0.274);
+  border-bottom: 0.5px solid rgba(44, 44, 44, 0.274);
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  top: 35px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.target .short-nose {
+  width: 18px;
+  height: 8px;
+  background-color: rgb(56, 56, 56);
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  top: 41px;
+  border-radius: 40%;
+}
+
+.target .nose-line {
+  height: 1px;
+  width: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  top: 45px;
+  border: 0.1px solid rgba(27, 27, 27, 0.582);
+  border-radius: 100%;
+}
+
+.target .nose-hole {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: rgba(27, 27, 27, 0.582);
+}
+
+.target .nose-hole.left-hole {
+  top: 44px;
+  left: 23px;
+}
+
+.target .nose-hole.right-hole {
+  top: 44px;
+  right: 23px;
 }
 
 .wall {
   position: absolute;
   border: none;
+}
+
+.decoration-bush {
+  width: 100px;
+  background-color: chartreuse;
+  height: 80px;
+  bottom: 0px;
+  z-index: 9;
+}
+
+.decoration-rock {
+  width: 160px;
+  height: 100px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  z-index: 8;
+  background-color: gray;
 }
 
 .layer-1 {
@@ -59,7 +294,7 @@ body {
 .layer-4 {
   z-index: 4;
   bottom: 0px;
-  left: 40px;
+  left: 70px;
   height: 330px;
 }
 
@@ -75,7 +310,7 @@ body {
 .layer-6 {
   z-index: 6;
   bottom: 0px;
-  right: 30px;
+  right: 60px;
   height: 260px;
 }
 
@@ -88,6 +323,14 @@ body {
   background-color: rgb(129, 37, 37);
 }
 
+.layer-8 {
+  left: 0;
+}
+
+.layer-9 {
+  right: 0;
+}
+
 .layer-11 {
   border: none;
   background-color: rgb(223, 212, 194);
@@ -98,8 +341,8 @@ body {
   top: -40px;
   z-index: 2px;
   overflow: hidden;
-  box-shadow: 10px 15px 32px rgba(233, 216, 188, 0.884),
-    10px 12px 22px rgba(209, 179, 115, 0.733);
+  box-shadow: 1px 1px 32px rgba(233, 216, 188, 0.884),
+    1px 1px 22px rgba(209, 179, 115, 0.733);
 }
 
 .layer-11 .moon-craters {
@@ -184,7 +427,7 @@ body {
 }
 
 .decoration-star.layer-16 {
-  top: 170px;
-  left: 245px;
+  top: 150px;
+  right: 25px;
   transform: rotate(-50deg);
 }
