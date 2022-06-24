@@ -94,7 +94,7 @@ body {
 .target.layer-4 .curve {
   width: 38px;
   height: 50px;
-  background-color: azure;
+  background-color: rgb(68, 51, 30);
   top: 35px;
   border-radius: 60%;
 }
@@ -102,7 +102,7 @@ body {
 .target.layer-6 .curve {
   width: 38px;
   height: 50px;
-  background-color: azure;
+  background-color: rgb(68, 51, 30);
   top: 35px;
   border-radius: 60%;
 }
@@ -132,14 +132,14 @@ body {
 .target.layer-4 .curve-2 {
   width: 20px;
   height: 26px;
-  background-color: azure;
+  background-color: rgb(68, 51, 30);
   top: 16px;
 }
 
 .target.layer-6 .curve-2 {
   width: 20px;
   height: 26px;
-  background-color: azure;
+  background-color: rgb(68, 51, 30);
   top: 16px;
 }
 
@@ -171,13 +171,13 @@ body {
 .target .outer-eye.right-eye {
   top: 20px;
   right: 10px;
-  transform: rotate(-20deg);
+  transform: rotate(-10deg);
 }
 
 .target .outer-eye.left-eye {
   top: 20px;
   left: 10px;
-  transform: rotate(20deg);
+  transform: rotate(10deg);
 }
 
 .target .inner-eye.right-eye {
@@ -192,19 +192,19 @@ body {
 
 .target .large-nose {
   width: 22px;
-  height: 15px;
-  border-left: 0.5px solid rgba(44, 44, 44, 0.274);
-  border-right: 0.5px solid rgba(44, 44, 44, 0.274);
-  border-bottom: 0.5px solid rgba(44, 44, 44, 0.274);
+  height: 18px;
+  border-left: 0.5px solid rgba(44, 44, 44, 0.151);
+  border-right: 0.5px solid rgba(44, 44, 44, 0.151);
+  border-bottom: 0.5px solid rgba(44, 44, 44, 0.151);
   left: 0px;
   right: 0px;
   margin: 0px auto;
-  top: 35px;
+  top: 33px;
   border-radius: 0px 0px 10px 10px;
 }
 
 .target .short-nose {
-  width: 18px;
+  width: 10px;
   height: 8px;
   background-color: rgb(56, 56, 56);
   left: 0px;
@@ -221,49 +221,185 @@ body {
   right: 0px;
   margin: 0px auto;
   top: 45px;
-  border: 0.1px solid rgba(27, 27, 27, 0.582);
+  border: 0.1px solid rgba(0, 0, 0, 0.582);
   border-radius: 100%;
 }
 
 .target .nose-hole {
-  height: 4px;
-  width: 4px;
+  height: 2px;
+  width: 2px;
   border-radius: 50%;
-  background-color: rgba(27, 27, 27, 0.582);
+  background-color: rgba(0, 0, 0, 0.582);
 }
 
 .target .nose-hole.left-hole {
   top: 44px;
-  left: 23px;
+  left: 26px;
 }
 
 .target .nose-hole.right-hole {
   top: 44px;
-  right: 23px;
+  right: 26px;
+}
+
+.target .lateral-line {
+  width: 0px;
+  height: 14px;
+}
+
+.target .lateral-line.left-line {
+  border-left: 1px solid rgba(44, 44, 44, 0.451);
+  left: 21px;
+  top: 30px;
+  transform: rotate(-10deg);
+}
+
+.target .lateral-line.right-line {
+  border-right: 1px solid rgba(44, 44, 44, 0.451);
+  right: 21px;
+  top: 30px;
+  transform: rotate(10deg);
 }
 
 .wall {
   position: absolute;
   border: none;
+  border-radius: 20px;
+  background-color: rgb(68, 51, 30);
+}
+
+.wall::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 15px;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(135deg, rgb(58, 43, 25) 25%, transparent 25%) -50px
+      0,
+    linear-gradient(-135deg, rgb(58, 43, 25) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, rgb(58, 43, 25) 25%, transparent 25%),
+    linear-gradient(-45deg, rgb(58, 43, 25) 25%, transparent 25%);
+  background-size: 40px 100px;
+}
+
+.wall::after {
+  border-radius: 15px;
+  content: "";
+  position: absolute;
+  left: -0px;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(135deg, rgb(47, 65, 29) 25%, transparent 10px) -10px
+      0,
+    linear-gradient(-135deg, rgb(47, 65, 29) 25%, transparent 10px) -10px 0,
+    linear-gradient(45deg, rgb(47, 65, 29) 25%, transparent 10px),
+    linear-gradient(-45deg, rgb(47, 65, 29) 25%, transparent 10px);
+  background-size: 40px 100px;
+  background-position: 140px 0 0 30px 0;
 }
 
 .decoration-bush {
   width: 100px;
-  background-color: chartreuse;
+  background-color: rgb(64, 88, 40);
   height: 80px;
   bottom: 0px;
   z-index: 9;
+  border-radius: 40px;
+  border: 0.3px solid rgb(51, 70, 32);
+  box-shadow: 5px 10px 5px rgb(35, 48, 23);
+}
+
+.decoration-bush .front-bush {
+  width: 90px;
+  height: 70px;
+  bottom: -16px;
+  background-color: rgb(64, 88, 40);
+  border: 0.3px solid rgb(51, 70, 32);
+  border-radius: 40px;
+}
+
+.decoration-bush .mid-bush {
+  width: 80px;
+  height: 80px;
+  bottom: -46px;
+  background-color: rgb(64, 88, 40);
+  border: 0.3px solid rgb(51, 70, 32);
+  border-radius: 60px;
+}
+
+.layer-8 .front-bush {
+  left: -20px;
+  box-shadow: 10px 1px 5px rgb(35, 48, 23);
+}
+
+.layer-8 .mid-bush {
+  left: 40px;
+  box-shadow: 10px 1px 5px rgb(35, 48, 23);
+}
+
+.layer-9 .front-bush {
+  right: -20px;
+  box-shadow: 10px 1px 5px rgb(35, 48, 23);
+}
+
+.layer-9 .mid-bush {
+  right: 40px;
+  box-shadow: 10px 1px 5px rgb(35, 48, 23);
 }
 
 .decoration-rock {
-  width: 160px;
-  height: 100px;
+  width: 110px;
+  height: 50px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin: 0 auto;
   z-index: 8;
+  background-color: rgb(107, 107, 107);
+  border-radius: 40px 50% 0px 0px;
+  left: 30px;
+}
+
+.decoration-rock .mid-rock {
+  width: 100px;
+  height: 40px;
+  bottom: 0px;
+  left: -20px;
+  right: 0px;
+  margin: 0 auto;
+  z-index: 8;
   background-color: gray;
+  border-radius: 40px 50% 0px 0px;
+}
+
+.decoration-rock .front-rock-1 {
+  width: 50px;
+  height: 80px;
+  bottom: -50px;
+  left: -60px;
+  right: 0px;
+  margin: 0 auto;
+  z-index: 8;
+  box-shadow: 10px 2px 2px rgb(107, 107, 107);
+  border: 0.2px solid rgb(107, 107, 107);
+  background-color: gray;
+  border-radius: 50% 20% 0px 0px;
+}
+
+.decoration-rock .front-rock-2 {
+  width: 50px;
+  height: 80px;
+  bottom: -70px;
+  left: -30px;
+  right: 0px;
+  margin: 0 auto;
+  z-index: 8;
+  box-shadow: 10px 6px 2px rgb(107, 107, 107);
+  border: 0.2px solid rgb(107, 107, 107);
+  background-color: gray;
+  border-radius: 50% 20% 0px 0px;
 }
 
 .layer-1 {
@@ -288,7 +424,6 @@ body {
   left: 0px;
   margin: 0 auto;
   z-index: 3;
-  background-color: azure;
 }
 
 .layer-4 {
@@ -304,7 +439,6 @@ body {
   bottom: 0px;
   left: 10px;
   z-index: 5;
-  background-color: rgb(82, 173, 97);
 }
 
 .layer-6 {
@@ -320,7 +454,6 @@ body {
   bottom: 0px;
   right: 10px;
   z-index: 7;
-  background-color: rgb(129, 37, 37);
 }
 
 .layer-8 {
