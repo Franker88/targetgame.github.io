@@ -1,12 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
 body {
   margin: 0 auto;
   display: grid;
   width: 100%;
   height: 100vh;
   place-items: center;
+  counter-reset: score;
 }
 .phone div {
   position: absolute;
+}
+
+h1 {
+  display: block;
+  position: absolute;
+  font-family: "Courgette", cursive;
+  z-index: 10;
+  color: rgb(223, 124, 67);
+  margin-block-start: 60px;
+  margin-inline-start: 40px;
+}
+
+.score-count {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  color: rgb(185, 116, 75);
+  text-align: center;
+  margin-block-start: 100px;
+  margin-inline-start: 40%;
+}
+
+.score-count::after {
+  content: counter(score);
 }
 
 .phone {
@@ -26,6 +53,18 @@ body {
   background-color: rgb(61, 56, 48);
   position: absolute;
   border-radius: 100px;
+}
+
+.target input[type="checkbox"] {
+  width: 55px;
+  height: 60px;
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+}
+
+.target input:checked {
+  counter-increment: score;
 }
 
 .target .front-layer {
@@ -159,6 +198,7 @@ body {
   background-color: antiquewhite;
   border-radius: 60%;
   border: 0.5px solid rgb(34, 34, 34);
+  overflow: hidden;
 }
 
 .target .inner-eye {
@@ -166,6 +206,31 @@ body {
   height: 8px;
   background-color: rgb(54, 52, 49);
   border-radius: 50%;
+
+  animation-name: close_eye;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes close_eye {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  40% {
+    transform: translateX(-3px);
+  }
+  60% {
+    transform: translateX(3px);
+  }
+  80% {
+    transform: translate(0px, 2px);
+  }
+  90% {
+    transform: translate(0px, 0px);
+  }
 }
 
 .target .outer-eye.right-eye {
@@ -183,11 +248,13 @@ body {
 .target .inner-eye.right-eye {
   top: 21px;
   right: 12px;
+  transform: rotate(-10deg);
 }
 
 .target .inner-eye.left-eye {
   top: 21px;
   left: 12px;
+  transform: rotate(10deg);
 }
 
 .target .large-nose {
@@ -407,6 +474,32 @@ body {
   bottom: 0px;
   right: 70px;
   height: 500px;
+
+  animation-name: first-wolf;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes first-wolf {
+  0% {
+    bottom: 0px;
+  }
+  10% {
+    bottom: -60px;
+  }
+  40% {
+    bottom: 0px;
+  }
+  45% {
+    bottom: -60px;
+  }
+  90% {
+    bottom: 0px;
+  }
+  95% {
+    bottom: -60px;
+  }
 }
 
 .layer-2 {
@@ -414,6 +507,44 @@ body {
   bottom: 0px;
   left: 70px;
   height: 500px;
+
+  animation-name: second-wolf;
+  animation-timing-function: ease-out;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes second-wolf {
+  0% {
+    bottom: 0px;
+  }
+  10% {
+    bottom: -60px;
+  }
+  20% {
+    bottom: 0px;
+  }
+  25% {
+    bottom: -60px;
+  }
+  40% {
+    bottom: 0px;
+  }
+  45% {
+    bottom: -60px;
+  }
+  60% {
+    bottom: 0px;
+  }
+  75% {
+    bottom: -60px;
+  }
+  90% {
+    bottom: 0px;
+  }
+  95% {
+    bottom: -60px;
+  }
 }
 
 .layer-3 {
@@ -431,6 +562,44 @@ body {
   bottom: 0px;
   left: 70px;
   height: 330px;
+
+  animation-name: third-wolf;
+  animation-timing-function: cubic-bezier(0.56, 0, 1, 0.74);
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes third-wolf {
+  0% {
+    bottom: 0px;
+  }
+  20% {
+    bottom: -60px;
+  }
+  30% {
+    bottom: 0px;
+  }
+  35% {
+    bottom: -60px;
+  }
+  45% {
+    bottom: 0px;
+  }
+  55% {
+    bottom: -60px;
+  }
+  70% {
+    bottom: 0px;
+  }
+  85% {
+    bottom: -60px;
+  }
+  90% {
+    bottom: 0px;
+  }
+  95% {
+    bottom: -60px;
+  }
 }
 
 .layer-5 {
@@ -446,6 +615,44 @@ body {
   bottom: 0px;
   right: 60px;
   height: 260px;
+
+  animation-name: fourth-wolf;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fourth-wolf {
+  0% {
+    bottom: 0px;
+  }
+  30% {
+    bottom: -60px;
+  }
+  40% {
+    bottom: 0px;
+  }
+  45% {
+    bottom: -60px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  55% {
+    bottom: -60px;
+  }
+  75% {
+    bottom: 0px;
+  }
+  90% {
+    bottom: -60px;
+  }
+  93% {
+    bottom: 0px;
+  }
+  97% {
+    bottom: -60px;
+  }
 }
 
 .layer-7 {
@@ -472,7 +679,7 @@ body {
   border-radius: 50%;
   left: -70px;
   top: -40px;
-  z-index: 2px;
+  z-index: 2;
   overflow: hidden;
   box-shadow: 1px 1px 32px rgba(233, 216, 188, 0.884),
     1px 1px 22px rgba(209, 179, 115, 0.733);
